@@ -1,0 +1,11 @@
+<Configuration>
+  <MappedFolders>
+    <MappedFolder>
+      <HostFolder>C:\Utilitaires_OPSI</HostFolder> <!-- à adapter -->
+      <ReadOnly>false</ReadOnly>
+    </MappedFolder>
+  </MappedFolders>
+  <LogonCommand>
+    <Command>powershell.exe</Command>
+  </LogonCommand>
+</Configuration>
