@@ -73,7 +73,6 @@ Le script `uninstall.opsiscript` s’occupe de supprimer les fichiers et désins
 
 Vous pouvez contacter :  
 📧 **axence.pro@gmail.com**  
-📱 **06 01 50 55 26**
 
 ---
 
