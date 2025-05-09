@@ -77,7 +77,7 @@ NomDuLogiciel/
 - Pour supprimer le paquet dans opsi :
   ```powershell
   opsi-package-manager -r nomdulogiciel
-- ```
+  ```
 
 ## 🔁 Désinstallation
 
