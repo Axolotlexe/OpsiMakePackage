@@ -63,7 +63,15 @@ NomDuLogiciel/
 - Se connecter au serveur OPSI en SSH
 - Copier le dossier du paquet dans `\\OPSI\workbench`
 - Lancer l'installation via la console **opsi-make-package**
-- Installer le paquet dans opsi, allez dans ```cd /var/lib/opsi/workbench/nomdulogiciel``` --> ```opsi-package-manager -i nomdulogiciel.opsi```
+- Installer le paquet dans opsi, allez dans
+  
+  ```powershell
+ cd /var/lib/opsi/workbench/nomdulogiciel```
+ -->
+
+ ```powershell
+ opsi-package-manager -i nomdulogiciel.opsi```
+
 - Pour supprimer le paquet dans opsi  --> ```opsi-package-manager -r nomdulogiciel```
 
 ## 🔁 Désinstallation
