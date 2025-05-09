@@ -68,7 +68,7 @@ NomDuLogiciel/
     ```powershell
   cd /var/lib/opsi/workbench/nomdulogiciel
   ```
-- puis pour packager le logiciel en .opsi :
+- Puis pour packager le logiciel en .opsi :
 
   ```powershell
   opsi-package-manager -i nomdulogiciel.opsi
