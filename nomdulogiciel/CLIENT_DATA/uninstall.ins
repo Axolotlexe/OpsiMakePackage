@@ -1,0 +1,25 @@
+encoding=utf8
+
+[Actions]
+requiredWinstVersion >= "4.11.2.6"
+
+;=== 1. Inclusion du fichier de variables ===
+include "%ScriptPath%\variables.ins"
+ShowBitmap $Bitmap$ $SoftwareName$
+
+;=== 2. Message de désinstallation ===
+Message "Désinstallation de $SoftwareName$ en cours..."
+
+;=== 3. Exécution de la désinstallation ===
+if FileExists($SilentFolderArgs$)
+    Message "Exécution du désinstallateur..."
+    ShellInAnIcon_RunUninstaller
+else
+    Message "Désinstallateur non trouvé: " + $SilentFolderArgs$
+    LogError "Désinstallateur non trouvé: " + $SilentFolderArgs$
+endif
+
+Message "Désinstallation de $SoftwareName$ terminée !"
+
+[ShellInAnIcon_RunUninstaller]
+shellCall('"$SilentFolderArgs$" $SilentArgs$')

@@ -1,0 +1,24 @@
+[Package]
+version: 1
+depends: 
+
+[Product]
+type: localboot
+id: nom du logiciel
+name: nom du logiciel
+description: description du logiciel
+advice: 
+version: 1.0
+priority: 100
+licenseRequired: False
+productClasses: 
+setupScript: setup.ins
+uninstallScript: uninstall.ins
+updateScript: 
+alwaysScript: 
+onceScript: 
+customScript: 
+userLoginScript: 
+
+[Changelog]
+nom du logiciel (1.0-1) stable; urgency=low

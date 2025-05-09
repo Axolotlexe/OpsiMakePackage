@@ -1,0 +1,30 @@
+encoding=utf8
+
+[Actions]
+requiredWinstVersion >= "4.11.2.6"
+
+;=== 1. Inclusion du fichier de variables ===
+include "%ScriptPath%\variables.ins"
+
+;=== 2. Déclarations des variables ===
+DefVar $ProductId$ = GetProductId
+DefVar $InstallerPath$ = "%ScriptPath%\nomdulogiciel.exe"
+
+;=== 3. Installation silencieuse ===
+ShowBitmap $Bitmap$ $SoftwareName$
+
+Message "Installation de $SoftwareName$ en cours..."
+
+; Exécution de l'installateur
+if FileExists($InstallerPath$)
+    ShellInAnIcon_RunInstaller
+else
+    LogError "Installateur non trouvé: " + $InstallerPath$
+    isFatalError "Installateur non trouvé"
+    Message "Installateur non trouvé: " + $InstallerPath$
+endif
+
+Message "Installation terminée !"
+
+[ShellInAnIcon_RunInstaller]
+shellCall('"$InstallerPath$" $SilentArgs$')

@@ -1,0 +1,18 @@
+encoding=utf8
+
+; Variables essentielles pour l'installation silencieuse
+DefVar $SoftwareName$
+DefVar $SilentArgs$
+DefVar $Bitmap$
+
+; Définition des variables
+Set $SoftwareName$ = "nomdulogiciel"
+Set $SilentArgs$ = "/S"
+Set $Bitmap$ = "%ScriptPath%\nomdelimage.png"
+Set $SilentFolderArgs$ = "Chemin d'accés au uninstall.exe du logiciel" <--! Exemple : "C:\Program Files\nomdulogiciel\uninstall.exe" -->
+
+; Récupération du type de système (pour compatibilité)
+DefVar $SystemType$
+if GetOS = "Windows_NT"
+    Set $SystemType$ = GetSystemType
+endif
