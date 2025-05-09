@@ -10,7 +10,6 @@ Ce projet vous guide dans la création d’un **paquet OPSI** permettant l’ins
 
 - Création structurée de paquets OPSI
 - Utilisation de Windows Sandbox pour tester les installations silencieuses
-- Génération automatique des scripts `install.opsiscript` et `uninstall.opsiscript`
 - Déploiement sur serveur OPSI avec connexion SSH
 
 ## 📁 Structure d’un paquet OPSI
@@ -51,19 +50,21 @@ NomDuLogiciel/
 ### 2. Tester l’installation silencieuse
 
 - Placer le fichier `.exe` dans `C:\Utilitaires_OPSI`
-- Utiliser le script `OpsiMakePackage.bat` fourni pour tester le mode silencieux
+- Utiliser le script `detect.bat` fourni pour tester le mode silencieux
 
 ### 3. Créer le paquet OPSI
 
 - Générer les scripts `install.opsiscript` et `uninstall.opsiscript`
-- Renseigner le fichier `control` avec les métadonnées
-- Ajouter le fichier `variable.ins` si nécessaire
+- Renseigner le fichier `control` avec les métadonnées du logiciel
+- Ajouter le fichier `variable.ins` modifier les variables si vous utilisez les fichiers de ce depot
 
 ### 4. Installer le paquet dans OPSI
 
 - Se connecter au serveur OPSI en SSH
 - Copier le dossier du paquet dans `\\OPSI\workbench`
-- Lancer l'installation via la console **Configed**
+- Lancer l'installation via la console **opsi-make-package**
+- Installer le paquet dans opsi, allez dans ```cd /var/lib/opsi/workbench/nomdulogiciel``` --> ```opsi-package-manager -i nomdulogiciel.opsi```
+- Pour supprimer le paquet dans opsi  --> ```opsi-package-manager -r nomdulogiciel```
 
 ## 🔁 Désinstallation
 
@@ -71,8 +72,8 @@ Le script `uninstall.opsiscript` s’occupe de supprimer les fichiers et désins
 
 ## 📨 Besoin d’aide ?
 
-Vous pouvez contacter :  
-📧 **axence.pro@gmail.com**  
+Vous pouvez me contacter :  
+📧 **help@it-opsi-setup.fr**  
 
 ---
 
